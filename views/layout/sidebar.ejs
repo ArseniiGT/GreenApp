@@ -1,0 +1,58 @@
+<div class="sidebar">
+    <div class="box auth">
+        <% if(!user.id && !user.login) { %>
+
+        <form method="post" class="login">
+            <h2>Log in</h2>
+            <div class="form-group">
+                <label for="login-login">Login</label>
+                <input type="text" id="login-login" name="login" />
+            </div>
+            <div class="form-group">
+                <label for="login-password">Password</label>
+                <input type="password" id="login-password" name="password" />
+            </div>
+            <div class="buttons">
+                <button class="switch-button secondary-inverse">Registration</button>
+                <button class="login-button">Sign in</button>
+            </div>
+        </form>
+
+        <form method="post" class="register">
+            <h2>Registration</h2>
+            <div class="form-group">
+                <label for="register-login">Login</label>
+                <input type="text" id="register-login" name="login" />
+            </div>
+            <div class="form-group">
+                <label for="register-password">Password</label>
+                <input type="password" id="register-password" name="password" />
+            </div>
+            <div class="form-group">
+                <label for="register-password-confirm">Duplicate password</label>
+                <input type="password" id="register-password-confirm" name="passwordConfirm" />
+            </div>
+            <div class="buttons">
+                <button class="switch-button secondary-inverse">Log in</button>
+                <button class="register-button">Registration</button>
+            </div>
+        </form>
+
+        <% } else { %>
+        <ul>
+            <li>
+                Hi,
+                <a href="/users/<%= user.login %>"> <%= user.login %> </a>!
+            </li>
+            <li>
+                <a href="/post/add">Add a new adapt plan</a>
+            </li>
+            <li>
+                <a href="/api/auth/logout">Log out</a>
+            </li>
+        </ul>
+
+        <% } %>
+    </div>
+    <div class="box"></div>
+</div>

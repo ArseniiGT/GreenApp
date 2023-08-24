@@ -1,0 +1,57 @@
+{
+  "name": "gg",
+  "version": "0.1.11",
+  "author": "Arsenii Rozhkov",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ArseniiGT/gg.git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "start_node": "node app.js",
+    "start_nodemon": "nodemon app.js",
+    "gulp": "gulp",
+    "start": " start npm run gulp && start npm run start_nodemon",
+    "restart": "pm2 startOrRestart ecosystem.config.js",
+    "deploy": "pm2 deploy ecosystem.config.js production"
+  },
+  "dependencies": {
+    "bcrypt-nodejs": "^0.0.3",
+    "body-parser": "^1.18.2",
+    "connect-mongo": "^2.0.1",
+    "dotenv": "^6.0.0",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "gm": "^1.23.1",
+    "jquery": "^3.3.1",
+    "mkdirp": "^0.5.1",
+    "moment": "^2.22.1",
+    "mongoose": "^5.1.7",
+    "mongoose-autopopulate": "^0.7.0",
+    "mongoose-url-slugs": "^1.0.2",
+    "multer": "^1.3.0",
+    "showdown": "^1.8.6",
+    "static-asset": "^0.6.0",
+    "transliter": "^2.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^5.0.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-node": "^6.0.1",
+    "express-modify-response": "^1.0.2",
+    "faker": "^4.1.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-plumber": "^1.2.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-uglifyjs": "^0.6.2",
+    "node-watch": "^0.5.8",
+    "nodemon": "^1.13.3"
+  },
+  "engines": {
+    "node": ">=9.0.0"
+  }
+}
